@@ -7,6 +7,7 @@ set -o pipefail
 
 id
 whoami
+ifconfig
 cat /etc/passwd
 
 HERE="$(dirname $(readlink -f $0))"
